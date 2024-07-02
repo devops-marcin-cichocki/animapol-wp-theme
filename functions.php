@@ -176,3 +176,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function my_custom_styles() {
+    // Najpierw odłącz oryginalny arkusz stylów, jeśli jest już zarejestrowany
+    wp_dequeue_style('animapol_theme-style');
+    wp_deregister_style('animapol_theme-style');
+
+    // Teraz zarejestruj nowy arkusz stylów z niestandardową ścieżką
+    wp_enqueue_style('animapol_theme-style', get_template_directory_uri() . '/sass/style.css', array(), '1.0.0', 'all');
+}
+add_action('wp_enqueue_scripts', 'my_custom_styles');
+
