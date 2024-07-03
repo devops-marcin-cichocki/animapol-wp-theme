@@ -1,0 +1,27 @@
+body.home .entry-header {
+  display: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.page-template-default {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.site-main {
+  height: calc(100vh - $size__desktop-height-header - $size__desktop-height-footer);
+  padding: 130px 80px 0 80px;
+  position: relative;
+  z-index: 1;
+
+  .entry-title {
+    margin: 0;
+    padding: 0!important;
+  }
+}

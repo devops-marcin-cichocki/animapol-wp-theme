@@ -15,6 +15,7 @@
 get_header();
 ?>
 
+<div class="square-wrapper"><span class="square-bg"></span></div>
 	<main id="primary" class="site-main">
 
 		<?php
