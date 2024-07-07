@@ -34,6 +34,17 @@ get_header();
 
 	</main><!-- #main -->
 
+
+<!-- background video player -->
+<?php if ( get_field('mp4_body_bg' ) ): ?>
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="<?php echo esc_html( get_field('mp4_body_bg') ); ?>" type="video/mp4">
+        </video>
+    </div>
+<?php endif; ?>
+<!-- background video player -->
+
 <?php
 get_sidebar();
 get_footer();

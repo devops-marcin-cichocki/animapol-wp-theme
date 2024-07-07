@@ -12,6 +12,16 @@
   z-index: 1;
 }
 
+.site-branding,
+.custom-logo,
+.custom-logo-link {
+  width: 157px;
+  height: 41px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
 #primary-menu {
   display: flex;
   width: 100%;
@@ -28,10 +38,30 @@
   }
 }
 
+.home {
+  &:not(.our-team-layer-active) {
+    .sp-team.sptp-section {
+      display: none;
+    }
+  }
+
+  &.our-team-layer-active {
+    .wp-block-heading,
+    .wp-block-buttons,
+    p {
+      display: none;
+    }
+
+    .square-bg {
+      right: -35vw;
+    }
+  }
+}
+
 .square-bg {
   display: flex;
-  width: 70%;
-  height: 150vh;
+  width: 70vw;
+  height: 300vh;
   background: $color__daytheme-bg;
   top: -500px;
   position: absolute;
@@ -42,7 +72,7 @@
 }
 
 .square-wrapper {
-  animation: rotate 500ms;
+  animation: rotate 300ms;
   animation-delay: 500ms;
   animation-fill-mode: forwards;
 }

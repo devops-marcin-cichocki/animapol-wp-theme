@@ -186,3 +186,11 @@ function my_custom_styles() {
 }
 add_action('wp_enqueue_scripts', 'my_custom_styles');
 
+function enqueue_custom_script() {
+    // Zarejestruj jQuery, jeśli jeszcze nie jest zarejestrowane
+    wp_enqueue_script('jquery');
+
+    // Zarejestruj i załaduj własny skrypt
+    wp_enqueue_script('custom-script', get_template_directory_uri() . '/js/custom-script.js', array('jquery'), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_script');
