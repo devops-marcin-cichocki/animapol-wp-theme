@@ -746,15 +746,19 @@ textarea {
   display: none;
 }
 .home.our-team-layer-active .square-bg {
+  left: initial;
   right: -35vw;
+  transition: all 1s ease-in-out;
 }
 
 .square-bg {
   display: flex;
   width: 70vw;
-  height: 300vh;
+  height: 500vh;
   background: #000;
-  top: -500px;
+  top: -800px;
+  left: initial;
+  right: initial;
   position: absolute;
   z-index: 0;
   animation: backInLeft;
@@ -848,10 +852,8 @@ body.home .entry-content {
 }
 .close-btn-triangle:hover {
   cursor: pointer;
-  color: #fff;
-}
-.close-btn-triangle:hover:before {
-  background: #000;
+  transition: all 0.3s linear;
+  transform: scale(1.1);
 }
 .close-btn-triangle:before {
   content: "";
@@ -880,10 +882,10 @@ body.home .entry-content {
 
 .sp-team.sptp-section {
   display: flex;
-  outline: 1px dashed red;
   position: absolute !important;
   top: 0;
   right: 0;
+  padding-right: 80px;
   max-width: 950px;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -895,6 +897,69 @@ body.home .entry-content {
   font-size: 40px;
   font-weight: 600;
   color: #fff !important;
+  animation: headShake 200ms;
+  animation-delay: 100ms;
+  animation-duration: 1s;
+}
+.sp-team.sptp-section .sp-team-item:nth-child(1) img {
+  animation: fadeIn;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  animation-delay: 0ms;
+}
+.sp-team.sptp-section .sp-team-item:nth-child(2) img {
+  animation: fadeIn;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  animation-delay: 70ms;
+}
+.sp-team.sptp-section .sp-team-item:nth-child(3) img {
+  animation: fadeIn;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  animation-delay: 140ms;
+}
+.sp-team.sptp-section .sp-team-item:nth-child(4) img {
+  animation: fadeIn;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  animation-delay: 210ms;
+}
+.sp-team.sptp-section .sp-team-item:nth-child(5) img {
+  animation: fadeIn;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  animation-delay: 280ms;
+}
+.sp-team.sptp-section .sp-team-item:nth-child(6) img {
+  animation: fadeIn;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  animation-delay: 350ms;
+}
+.sp-team.sptp-section .sp-team-item:nth-child(7) img {
+  animation: fadeIn;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  animation-delay: 420ms;
+}
+.sp-team.sptp-section .sp-team-item:nth-child(8) img {
+  animation: fadeIn;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  animation-delay: 490ms;
+}
+.sp-team.sptp-section .sp-team-item:nth-child(9) img {
+  animation: fadeIn;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  animation-delay: 560ms;
+}
+.sp-team.sptp-section .sp-team-item:nth-child(10) img {
+  animation: fadeIn;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  animation-delay: 630ms;
 }
 .sp-team.sptp-section .sp-team-item .sptp-member-avatar-img {
   background: transparent !important;
@@ -912,6 +977,7 @@ body.home .entry-content {
   font-size: 12px;
 }
 .sp-team.sptp-section .sp-team-item .sptp-member img {
+  opacity: 0;
   width: 195px;
   height: auto;
 }

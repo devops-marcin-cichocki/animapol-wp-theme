@@ -27,7 +27,7 @@ body {
 
 .site-main {
   height: calc(
-    100vh - $size__desktop-height-header - $size__desktop-height-footer
+          100vh - $size__desktop-height-header - $size__desktop-height-footer
   );
   padding: 130px 80px 0 80px;
   position: relative;
@@ -78,11 +78,8 @@ body {
 
   &:hover {
     cursor: pointer;
-    color: $color__daytheme-txt;
-
-    &:before {
-      background: $color__daytheme-bg;
-    }
+    transition: all 0.3s linear;
+    transform: scale(1.1);
   }
 
   &:before {
@@ -113,26 +110,42 @@ body {
 
 .sp-team.sptp-section {
   display: flex;
-  outline: 1px dashed red;
   position: absolute !important;
   top: 0;
   right: 0;
+  padding-right: 80px;
   max-width: 950px;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
   height: calc(
-    100vh - $size__desktop-height-header - $size__desktop-height-footer
+          100vh - $size__desktop-height-header - $size__desktop-height-footer
   );
 
   .sptp-section-title span {
     font-size: 40px;
     font-weight: 600;
     color: $color__daytheme-txt !important;
+    animation: headShake 200ms;
+    animation-delay: 100ms;
+    animation-duration: 1s;
   }
 
   .sp-team-item {
+    $animation-duration: 350ms;
+    $animation-delay: 70ms;
+    $max-items: 10;
+
+    @for $i from 1 through $max-items {
+      &:nth-child(#{$i}) img {
+        animation: fadeIn;
+        animation-duration: $animation-duration;
+        animation-fill-mode: forwards;
+        animation-delay: $animation-delay * ($i - 1);
+      }
+    }
+
     .sptp-member-avatar-img {
       background: transparent !important;
     }
@@ -153,6 +166,7 @@ body {
     }
 
     .sptp-member img {
+      opacity: 0;
       width: 195px;
       height: auto;
     }
