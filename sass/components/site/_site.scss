@@ -7,7 +7,7 @@ body {
   font-optical-sizing: auto;
   font-weight: normal;
   font-style: normal;
-  background: red;
+  background: $color__daytheme-bg;
 
   &.home {
     .entry-content {
@@ -78,7 +78,7 @@ body {
 
   &:hover {
     cursor: pointer;
-    transition: all 0.3s linear;
+    transition: all 0.3s ease-in-out;
     transform: scale(1.1);
   }
 

@@ -30,6 +30,10 @@
   justify-content: flex-end;
   align-items: center;
 
+  .current_page_item a {
+    font-weight: 900;
+  }
+
   .page_item a {
     margin-right: 40px;
     color: $color__daytheme-txt;
